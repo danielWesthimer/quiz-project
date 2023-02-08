@@ -15,6 +15,21 @@ function Question({ quiz }) {
     const [buttonDisable, setButtonDisable] = useState(false);
     const [isToGreen, setisToGreen] = useState(false);
     const [timer, setTimer] = useState(timeForAnswer);
+    
+
+    const sets = {
+        setButtonDisable,
+        setisToGreen,
+        setScore, setAccess,
+        setColor
+    };
+
+    const varibals = {
+        buttonDisable,
+        isToGreen,score,
+        count, countAll,
+        timer
+    };
 
     function theNextSeries() {
         setButtonDisable(false)
@@ -44,24 +59,7 @@ function Question({ quiz }) {
         setCount(count + 1)
         setAccess("")
     }
-    function checkIsTrue(number, correct, event) {
-        setButtonDisable(true);
-        setisToGreen(true)
-        if (number == correct) {
-            setScore(score + timer)
-            setAccess("Yes the answer is corect!")
-            setColor({ color: "green" })
-        }
-        else {
-            setAccess("No the answer is not corect!")
-            setColor({ color: "red" })
-            event.backgroundColor = "red";
-        }
-        setTimeout(() => {
-            theNextQes()
-            event.backgroundColor = "white";
-        }, 1500);
-    }
+
 
     return (
         <div id="Question">
@@ -73,9 +71,10 @@ function Question({ quiz }) {
             <h2>Question:{count + 1}</h2>
             <p>{quiz && quiz[countAll][count].question}</p>
             <Answers
-                checkIsTrue={checkIsTrue} isToGreen={isToGreen}
-                quiz={quiz} buttonDisable={buttonDisable}
-                count={count} countAll={countAll}
+                varibals={varibals}
+                sets={sets}
+                theNextQes={theNextQes}
+                quiz={quiz}
 
             />
             <h2 style={color}>{access}</h2>

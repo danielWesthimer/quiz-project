@@ -1,10 +1,33 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 
-function Answers({quiz,buttonDisable,isToGreen,checkIsTrue,count,countAll}) {
+function Answers({quiz,theNextQes,varibals,sets}) {
+
+    const{setButtonDisable,setisToGreen,setScore,setAccess,  setColor}=sets;
+    const{buttonDisable,isToGreen,score,timer,count,countAll}=varibals;
+
+    function checkIsTrue(number, correct, event) {
+        setButtonDisable(true);
+        setisToGreen(true)
+        if (number == correct) {
+            setScore(score + timer)
+            setAccess("Yes the answer is corect!")
+            setColor({ color: "green" })
+        }
+        else {
+            setAccess("No the answer is not corect!")
+            setColor({ color: "red" })
+            event.backgroundColor = "red";
+        }
+        setTimeout(() => {
+            theNextQes()
+            event.backgroundColor = "white";
+        }, 1500);
+    }
 
     return (
-    <div> <h2>Answers:</h2>
+    <div> 
+        <h2>Answers:</h2>
         {quiz && quiz[countAll][count].answer.map(
             (answer) => {
                 return <button
