@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from 'react';
+import Answers from "./Answers";
 import Timer from './Timer';
+
 
 function Question({ quiz }) {
 
@@ -70,22 +72,12 @@ function Question({ quiz }) {
             <h2>Level: {countAll + 1}</h2>
             <h2>Question:{count + 1}</h2>
             <p>{quiz && quiz[countAll][count].question}</p>
-            <h2>Answers:</h2>
-            {quiz && quiz[countAll][count].answer.map(
-                (answer) => {
-                    return <button
-                        disabled={buttonDisable}
-                        onClick={(event) => {
-                            checkIsTrue(answer.number, quiz[countAll][count].correct, event.target.style)
-                        }}>
-                        <div className="answerDiv"
-                            style={{
-                                backgroundColor: answer.number == quiz[countAll][count].correct && isToGreen && "green"
-                            }}>
-                            {answer.number}. {answer.body}
-                        </div>
-                    </button>
-                })}
+            <Answers
+                checkIsTrue={checkIsTrue} isToGreen={isToGreen}
+                quiz={quiz} buttonDisable={buttonDisable}
+                count={count} countAll={countAll}
+
+            />
             <h2 style={color}>{access}</h2>
 
             <h3>score: {score}</h3>
