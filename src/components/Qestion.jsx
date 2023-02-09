@@ -16,17 +16,15 @@ function Question({ quiz }) {
     const [isToGreen, setisToGreen] = useState(false);
     const [timer, setTimer] = useState(timeForAnswer);
     
-
     const sets = {
         setButtonDisable,
         setisToGreen,
         setScore, setAccess,
         setColor
     };
-
-    const varibals = {
+    const stateVaribals = {
         buttonDisable,
-        isToGreen,score,
+        isToGreen, score,
         count, countAll,
         timer
     };
@@ -71,7 +69,7 @@ function Question({ quiz }) {
             <h2>Question:{count + 1}</h2>
             <p>{quiz && quiz[countAll][count].question}</p>
             <Answers
-                varibals={varibals}
+                stateVaribals={stateVaribals}
                 sets={sets}
                 theNextQes={theNextQes}
                 quiz={quiz}
