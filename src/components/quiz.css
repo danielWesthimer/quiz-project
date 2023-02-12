@@ -1,15 +1,16 @@
-#body{
-    
+#body {
+
     height: 1500px;
-    background: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    background: linear-gradient(-20deg, #ff213f 0%, #e321fd 100%);
     text-align: center;
     /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */} 
+    -webkit-text-fill-color: transparent; */
+}
 
-#title{
+#title {
     text-transform: uppercase;
     font-family: verdana;
-    font-size: 8em;
+    font-size: 6em;
     font-weight: 700;
     color: #f5f5f5;
     text-shadow: 1px 1px 1px #919191,
@@ -22,40 +23,47 @@
         1px 8px 1px #919191,
         1px 9px 1px #919191,
         1px 10px 1px #919191,
-    1px 18px 6px rgba(16,16,16,0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
-    
+        1px 18px 6px rgba(16, 16, 16, 0.4),
+        1px 22px 10px rgba(16, 16, 16, 0.2),
+        1px 25px 35px rgba(16, 16, 16, 0.2),
+        1px 30px 60px rgba(16, 16, 16, 0.4);
+
 }
-#question{
-    font-size:70px;
-    color: aquamarine;
-    
 
-    
+#question {
+    font-size: 40px;
+    color: aquamarine;
 }
-    #timer{
 
-        font-size:200px;
-        color: #b721ff;
-        position: absolute;
-        top:6%;
-        right: 10%;
-                  
-    }
+#timer {
 
-    .answerDiv{
-        height: 150px;
-        width: 250px;
-        font-size:2em;
-       
-        ;
-    }
-   #score{
-    color: aquamarine;
-    font-size:50px;
+    font-size: 200px;
+    color: #b721ff;
     position: absolute;
-    top:  10%;
+    top: 6%;
+    right: 10%;
+
+}
+
+
+.answerDiv {
+    height: 100px;
+    width: 250px;
+    font-size: 2em;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 7px;
+    display: inline-block;
+    
+}
+/* .answerDiv:hover{
+    font-size: 225%;
+} */
+
+#score {
+    color: aquamarine;
+    font-size: 50px;
+    position: absolute;
+    top: 10%;
     left: 10%;
-   }
+}

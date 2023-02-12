@@ -2,30 +2,30 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import Answers from "./Answers";
 import Timer from './Timer';
- import './quiz.css';
+import './quiz.css';
 
 function Question({ quiz }) {
-
-    const timeForAnswer = 9;
+    
+    const timeForAnswer = 4;
     const [score, setScore] = useState(0);
-    const [count, setCount] = useState(0);
-    const [countAll, setCountAll] = useState(0);
+    const [counter, setCounter] = useState({count:0,countAll:0,countView:1});
     const [access, setAccess] = useState("");
     const [color, setColor] = useState({});
     const [buttonDisable, setButtonDisable] = useState(false);
     const [isToGreen, setisToGreen] = useState(false);
     const [timer, setTimer] = useState(timeForAnswer);
-    const [background, setBackground] = useState(["pink","blue","red","blue","red","blue","red","blue","red","blue"]);
-    
-    
+   
     const sets = {
         setButtonDisable,setisToGreen,
          setScore, setAccess, setColor
     };
     const stateVaribals = {
         buttonDisable,isToGreen, score,
-        count, countAll,timer,background
+        counter,timer
     };
+
+    let {count,countAll,countView}= counter;
+
     function theNextSeries() {
         setButtonDisable(false)
         setisToGreen(false)
@@ -34,9 +34,9 @@ function Question({ quiz }) {
             setButtonDisable(true)
             return;
         }
-        setCountAll(countAll + 1); setCount(0); setAccess("");
+         setCounter({...counter,count: 0,countAll:countAll + 1,countView:countView+1});
+         setAccess("");
     }
-
     function theNextQes() {
         setButtonDisable(false)
         setisToGreen(false)
@@ -50,16 +50,16 @@ function Question({ quiz }) {
             return;
         }
         setTimer(timeForAnswer)
-        setCount(count + 1)
+        setCounter({...counter,count:count + 1,countView:countView + 1})
         setAccess("")
     }
-
     return (
-        <div /* style={{backgroundColor:background[timer]}} */>
+        <div >
             <Timer buttonDisable={buttonDisable}
                    theNextQes={theNextQes}
                    timer={timer}
                    setTimer={setTimer} />
+             {quiz&&<h4>{countView}/{quiz.length *quiz[0].length }</h4>}      
             <h2>Level: {countAll + 1}</h2>
             <h2 >Question:{count + 1}</h2>
             <p id="question">{quiz && quiz[countAll][count].question}</p>
@@ -68,9 +68,7 @@ function Question({ quiz }) {
                 sets={sets}
                 theNextQes={theNextQes}
                 quiz={quiz}/>
-            
             <h2 style={color}>{access}</h2>
-
             <h3 id="score">score: {score}</h3>
         </div>);
 }
