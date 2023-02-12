@@ -9,6 +9,7 @@ function Game() {
     const { categoryName } = useParams();
     const [quiz, setQuiz] = useState();
     
+    
     useEffect(
         () => { GetQuiz() }
         , []);
@@ -21,7 +22,7 @@ function Game() {
 
     return (
         <div id="body">
-           
+           <h1 id="title">QUIZ!!!</h1>
             <Question quiz={quiz} />
         
             {/* <Button   variant="success">Primary</Button>{' '}  */}

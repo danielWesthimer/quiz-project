@@ -33,7 +33,7 @@ function Timer({ setTimer, theNextQes, buttonDisable, timer }) {
                     <div class="number"
                          id="myDIV"
                          style={{ animation: "animate 10s linear infinite",  animationDelay: `${timeForAnswer-timer}s` }}> */}
-        <h2>{timer}</h2>
+        <h2 id="timer">{timer}</h2>
         {/* </div>
         </div> */}
     </div>

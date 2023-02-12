@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 function Answers({quiz,theNextQes,stateVaribals ,sets}) {
 
     const{setButtonDisable,setisToGreen,setScore,setAccess,  setColor}=sets;
-    const{buttonDisable,isToGreen,score,timer,count,countAll}=stateVaribals;
+    const{buttonDisable,isToGreen,score,timer,count,countAll,background}=stateVaribals;
 
     function checkIsTrue(number, correct, event) {
         setButtonDisable(true);
@@ -21,7 +21,7 @@ function Answers({quiz,theNextQes,stateVaribals ,sets}) {
         }
         setTimeout(() => {
             theNextQes()
-            event.backgroundColor = "white";
+             event.backgroundColor = "white" ;
         }, 1500);
     }
 
@@ -39,7 +39,7 @@ function Answers({quiz,theNextQes,stateVaribals ,sets}) {
                         style={{
                             backgroundColor: answer.number == quiz[countAll][count].correct && isToGreen && "green"
                         }}>
-                        {answer.number}. {answer.body}
+                        {answer.body}
                     </div>
                 </button>
             })}

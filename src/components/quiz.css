@@ -1,0 +1,61 @@
+#body{
+    
+    height: 1500px;
+    background: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    text-align: center;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */} 
+
+#title{
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 8em;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+    
+}
+#question{
+    font-size:70px;
+    color: aquamarine;
+    
+
+    
+}
+    #timer{
+
+        font-size:200px;
+        color: #b721ff;
+        position: absolute;
+        top:6%;
+        right: 10%;
+                  
+    }
+
+    .answerDiv{
+        height: 150px;
+        width: 250px;
+        font-size:2em;
+       
+        ;
+    }
+   #score{
+    color: aquamarine;
+    font-size:50px;
+    position: absolute;
+    top:  10%;
+    left: 10%;
+   }
