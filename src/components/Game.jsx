@@ -6,11 +6,11 @@ import Button from "react-bootstrap/esm/Button";
 
 function Game() {
 
-    const timeForAnswer = 3;
+    const timeForAnswer = 9;
     const { categoryName } = useParams();
     const [quiz, setQuiz] = useState();
     const [timer, setTimer] = useState(timeForAnswer);
-    const [background, setBackground] = useState(["background0","background1","background2","background3"]);
+    const [background, setBackground] = useState(["background0","background1","background2","background3","background0","background1","background2","background3","background3","background3"]);
     
     useEffect(
         () => { GetQuiz() }
@@ -19,6 +19,7 @@ function Game() {
     async function GetQuiz() {
         const res = await fetch(`http://localhost:8000/${categoryName}`)
         const data = await res.json()
+        // data.sort(()=>Math.random()-0.5)
         setQuiz(data);
     }
 
