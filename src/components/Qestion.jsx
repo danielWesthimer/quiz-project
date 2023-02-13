@@ -57,7 +57,7 @@ function Question({ quiz }) {
     }
 
     return (
-        <div /* style={{backgroundColor:background[timer]}} */>
+        <div >
             <Timer buttonDisable={buttonDisable}
                    theNextQes={theNextQes}
                    timer={timer}
