@@ -1,11 +1,22 @@
-#body {
+ 
+ #body {
+    height: 100%; 
+    text-align: center; 
+} 
 
-    height: 1500px;
-    background: linear-gradient(-20deg, #ff213f 0%, #e321fd 100%);
-    text-align: center;
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+.background0 {
+    background: linear-gradient(-20deg, #ff213f 0%, #f921fd 100%); 
 }
+.background1 {
+    background: linear-gradient(-20deg, #ff21b1 0%, #a121fd 100%); 
+}
+.background2 {
+    background: linear-gradient(-20deg, #5421fd 0%, #6e21fd 100%); 
+}
+.background3 {
+    background: linear-gradient(-20deg, #216efd 0%, #21c2fd 100%); 
+}
+
 
 #title {
     text-transform: uppercase;
