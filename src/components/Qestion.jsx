@@ -34,7 +34,9 @@ function Question({ quiz }) {
             setButtonDisable(true)
             return;
         }
-        setCountAll(countAll + 1); setCount(0); setAccess("");
+         setCountAll(countAll + 1);
+         setCount(0);
+         setAccess("");
     }
 
     function theNextQes() {

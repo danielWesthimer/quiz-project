@@ -27,6 +27,7 @@ function Answers({quiz,theNextQes,stateVaribals ,sets}) {
 
     return (
     <div> 
+       
         <h2>Answers:</h2>
         {quiz && quiz[countAll][count].answer.map(
             (answer) => {
