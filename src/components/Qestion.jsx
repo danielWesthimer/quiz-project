@@ -23,11 +23,6 @@ function Question({ quiz, timeForAnswer, timer, setTimer }) {
     };
     let { count, countAll, countView } = counter;
 
-    // useEffect(
-    //     
-    //      quiz.sort((a,b) => Math.random() - 0.5)
-        
-    //     , []);
 
     function theNextSeries() {
         setButtonDisable(false)
@@ -40,7 +35,8 @@ function Question({ quiz, timeForAnswer, timer, setTimer }) {
         setCounter({ ...counter, count: 0, countAll: countAll + 1, countView: countView + 1 });
         setAccess("");
     }
-    function theNextQes() {
+    function theNextQes(interval) {
+        
         setButtonDisable(false)
         setisToGreen(false)
         if (count == quiz[countAll].length - 1) {
@@ -48,11 +44,12 @@ function Question({ quiz, timeForAnswer, timer, setTimer }) {
             setButtonDisable(true)
             setTimeout(() => {
                 theNextSeries()
+                clearInterval(interval)
                 setTimer(timeForAnswer)
             }, 1000);
             return;
         }
-        setTimer(timeForAnswer)
+         setTimer(timeForAnswer)
         setCounter({ ...counter, count: count + 1, countView: countView + 1 })
         setAccess("")
     }

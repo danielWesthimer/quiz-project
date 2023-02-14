@@ -6,9 +6,14 @@ app.use(express.json());
 app.use(cors());
 
 function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+function sorting(array) {
   for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array.length; j++) {
-      array[i][j].answer.sort(() => Math.random() - 0.5);
+    shuffle(array[i]);
+    for (let j = 0; j < array[i].length; j++) {
+      shuffle(array[i][j].answer);
     }
   }
 }
@@ -704,22 +709,22 @@ const data = {
 };
 app.get("/animals", (req, res) => {
   const url = req.url;
-  shuffle(data.animals);
+  sorting(data.animals);
   res.send(data.animals);
 });
 app.get("/sport", (req, res) => {
   const url = req.url;
-  shuffle(data.sport);
+  sorting(data.sport);
   res.send(data.sport);
 });
 app.get("/tecnology", (req, res) => {
   const url = req.url;
-  shuffle(data.tecnology);
+  sorting(data.tecnology);
   res.send(data.tecnology);
 });
 app.get("/all%20category", (req, res) => {
   const url = req.url;
-  shuffle(data.tecnology);
+  sorting(data.tecnology);
 
   res.send(data.tecnology);
 });

@@ -1,17 +1,19 @@
 import React from "react";
 import { useState, useEffect } from 'react';
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Question from "./Qestion";
 import Button from "react-bootstrap/esm/Button";
+import Setings from "./Setings";
 
 function Game() {
 
-    const timeForAnswer = 9;
+
     const { categoryName } = useParams();
     const [quiz, setQuiz] = useState();
+    const [timeForAnswer, setTimeForAnswer] = useState(9);
     const [timer, setTimer] = useState(timeForAnswer);
-    const [background, setBackground] = useState(["background0","background1","background2","background3","background0","background1","background2","background3","background3","background3"]);
-    
+    const [background, setBackground] = useState(["background0", "background1", "background2", "background3"]);
+
     useEffect(
         () => { GetQuiz() }
         , []);
@@ -24,10 +26,11 @@ function Game() {
     }
 
     return (
-        <div id="body" 
-             className={background[timer]}>
+        <div id="body"
+            className={background[timer % background.length]}>
+            <Setings setTimeForAnswer={setTimeForAnswer} />
             <h1 id="title">QUIZ!!!</h1>
-            <Question quiz={quiz} timer={timer} setTimer={setTimer} timeForAnswer={timeForAnswer}/>
+            <Question quiz={quiz} timer={timer} setTimer={setTimer} timeForAnswer={timeForAnswer} />
             {/* <Button   variant="success">Primary</Button>{' '}  */}
         </div>
     );
