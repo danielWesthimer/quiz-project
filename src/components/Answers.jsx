@@ -6,7 +6,9 @@ function Answers({ quiz, theNextQes, stateVaribals, sets }) {
     const { setButtonDisable, setisToGreen, setScore, setAccess, setColor } = sets;
     const { buttonDisable, isToGreen, score, timer, counter } = stateVaribals;
     let { count, countAll } = counter;
+    
 
+    
     function checkIsTrue(number, correct, event) {
         setButtonDisable(true);
         setisToGreen(true)
