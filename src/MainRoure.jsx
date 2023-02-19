@@ -15,7 +15,7 @@ function MainRoure() {
             <Routes>
                 {/* <Route path='/' element={<Login/>} /> */}
                 <Route path='/' element={<Home/>} />
-                <Route path='/game/:categoryName' element={<Game/>} />
+                <Route path='/game/:categoryName' element={<Game />} />
             </Routes>
         </BrowserRouter>
     )

@@ -5,7 +5,8 @@ function Timer({ setTimer, theNextQes, buttonDisable, timer }) {
     let interval;
     useEffect(
         () => {
-            setTimer(timer)
+            
+            // setTimer(timer)
             if (!buttonDisable) {
 
                 timerPlay();
