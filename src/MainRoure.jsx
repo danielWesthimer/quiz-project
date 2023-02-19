@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 // import Login from './components/Login';
 import Home from './components/Home';
 import Game from './components/Game';
+import Categories from './components/Categories';
 
 
 
@@ -15,6 +16,7 @@ function MainRoure() {
             <Routes>
                 {/* <Route path='/' element={<Login/>} /> */}
                 <Route path='/' element={<Home/>} />
+                <Route path='/categories' element={<Categories/>} />
                 <Route path='/game/:categoryName' element={<Game />} />
             </Routes>
         </BrowserRouter>

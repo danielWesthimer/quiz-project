@@ -1,80 +1,100 @@
- 
- #body {
-    height: 100%; 
-    text-align: center; 
-} 
+ .bodyHome {
+     height: 650px;
+     text-align: center;
+     background: linear-gradient(-20deg, #ff213f 0%, #f921fd 100%);
+ }
+ .bodyCat {
+     height: 650px;
+     text-align: center;
+     background: linear-gradient(-20deg, #ff21b1 0%, #a121fd 100%);
+ }
 
-.background0 {
-    background: linear-gradient(-20deg, #ff213f 0%, #f921fd 100%); 
-}
-.background1 {
-    background: linear-gradient(-20deg, #ff21b1 0%, #a121fd 100%); 
-}
-.background2 {
-    background: linear-gradient(-20deg, #5421fd 0%, #6e21fd 100%); 
-}
-.background3 {
-    background: linear-gradient(-20deg, #216efd 0%, #21c2fd 100%); 
-}
+ #bodyGame {
+     height: 100%;
+     text-align: center;
+ }
 
+ .background0 {
+     background: linear-gradient(-20deg, #ff213f 0%, #f921fd 100%);
+ }
 
-#title {
-    text-transform: uppercase;
-    font-family: verdana;
-    font-size: 6em;
-    font-weight: 700;
-    color: #f5f5f5;
-    text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
-        1px 18px 6px rgba(16, 16, 16, 0.4),
-        1px 22px 10px rgba(16, 16, 16, 0.2),
-        1px 25px 35px rgba(16, 16, 16, 0.2),
-        1px 30px 60px rgba(16, 16, 16, 0.4);
+ .background1 {
+     background: linear-gradient(-20deg, #ff21b1 0%, #a121fd 100%);
+ }
 
-}
+ .background2 {
+     background: linear-gradient(-20deg, #5421fd 0%, #6e21fd 100%);
+ }
 
-#question {
-    font-size: 40px;
-    color: aquamarine;
-}
-
-#timer {
-
-    font-size: 200px;
-    color: #b721ff;
-    position: absolute;
-    top: 6%;
-    right: 10%;
-
-}
+ .background3 {
+     background: linear-gradient(-20deg, #216efd 0%, #21c2fd 100%);
+ }
 
 
-.answerDiv {
-    height: 100px;
-    width: 250px;
-    font-size: 2em;
-    background-color: white;
-    border-radius: 10px;
-    margin-right: 7px;
-    display: inline-block;
-    
-}
-/* .answerDiv:hover{
+ .title {
+     text-align: center;
+     text-transform: uppercase;
+     font-family: verdana;
+     font-size: 6em;
+     font-weight: 700;
+     color: #f5f5f5;
+     text-shadow: 1px 1px 1px #919191,
+         1px 2px 1px #919191,
+         1px 3px 1px #919191,
+         1px 4px 1px #919191,
+         1px 5px 1px #919191,
+         1px 6px 1px #919191,
+         1px 7px 1px #919191,
+         1px 8px 1px #919191,
+         1px 9px 1px #919191,
+         1px 10px 1px #919191,
+         1px 18px 6px rgba(16, 16, 16, 0.4),
+         1px 22px 10px rgba(16, 16, 16, 0.2),
+         1px 25px 35px rgba(16, 16, 16, 0.2),
+         1px 30px 60px rgba(16, 16, 16, 0.4);
+
+ }
+
+ #question {
+     font-size: 40px;
+     color: aquamarine;
+ }
+
+ #timer {
+
+     font-size: 200px;
+     color: #b721ff;
+     position: absolute;
+     top: 6%;
+     right: 10%;
+
+ }
+
+
+ .answerDiv {
+     height: 100px;
+     width: 250px;
+     font-size: 2em;
+     background-color: white;
+     border-radius: 10px;
+     margin-right: 7px;
+     display: inline-block;
+
+ }
+
+ /* .answerDiv:hover{
     font-size: 225%;
 } */
 
-#score {
-    color: aquamarine;
-    font-size: 50px;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-}
+ #score {
+     color: aquamarine;
+     font-size: 50px;
+     position: absolute;
+     top: 10%;
+     left: 10%;
+ }
+ #link {
+     color: aquamarine;
+     font-size: 50px;
+     
+ }

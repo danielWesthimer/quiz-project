@@ -1,27 +1,55 @@
 import React from "react";
 import { useState, useEffect } from 'react';
-import {useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Question from "./Qestion";
-let count =0;
-function Setings({setTimeForAnswer}) {
+import setingsImg from "./setingsImg.jpg"
 
-    const[difficulty,setDifficulty] = useState(["hard","easy","medium"]);
-    
+let count = 0;
+function Setings({ setTimeForAnswer ,setIsBackgroundChange,isBackgroundChange}) {
+
+    const [difficulty, setDifficulty] = useState(["hard", "easy", "medium"]);
+    const [isViewSetings, setIsViewSetings] = useState(false);
+
     function changeDifficulty() {
-        console.log("hhhh");
-        if(count % difficulty.length==0)
-        {setTimeForAnswer(6)}
-        else if(count % difficulty.length==1)
-        {setTimeForAnswer(11)}
-        else{setTimeForAnswer(9)}
+       
+       
+        if (count % difficulty.length == 0) { setTimeForAnswer(6) }
+        else if (count % difficulty.length == 1) { setTimeForAnswer(11) }
+        else { setTimeForAnswer(9) }
         count++
     }
+   function changeBackground(){
+    setIsBackgroundChange(!isBackgroundChange)
+   }
 
-    return ( 
+    return (
         <div>
-            <button onClick={changeDifficulty}>{difficulty[count % difficulty.length]}</button>
-            <button></button>
-            <button></button>
+            {!isViewSetings && <button style={{ position:"absolute",left:"0px" }}
+                onClick={() => setIsViewSetings(!isViewSetings)}>
+                <img
+                    src={setingsImg}
+                    style={{ width: "50px", height: "50px" }}>
+                </img>
+            </button>}
+            {isViewSetings && <div style={{ width: "150px", height: "150px" ,backgroundColor:"white"}}>
+                <button style={{ position:"absolute",left:"0px" }}
+                     onClick={ ()=> setIsViewSetings(false)}>
+                  x
+                </button>
+                רמה<br></br>
+                <button
+                    onClick={changeDifficulty}>
+                    {difficulty[count % difficulty.length]}
+                </button><br></br>
+                רקע<br></br>
+                <button
+                    onClick={changeBackground}>
+                  {isBackgroundChange? "קבוע":"מתחלף"}
+                </button>
+
+
+                </div>}
+
 
 
 
