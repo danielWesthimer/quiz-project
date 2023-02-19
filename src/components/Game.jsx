@@ -14,6 +14,7 @@ function Game() {
     const [timer, setTimer] = useState(timeForAnswer);
     const [background, setBackground] = useState(["background0", "background1", "background2", "background3"]);
     const [isBackgroundChange, setIsBackgroundChange] = useState(true);
+    const [difficulty, setDifficulty] = useState(["hard", "easy", "medium"]);
 
     useEffect(
         () => { GetQuiz() }
@@ -29,9 +30,10 @@ function Game() {
     return (
         <div id="bodyGame"
             className={isBackgroundChange?background[timer % background.length]:background[2]}>
-            <Setings setTimeForAnswer={setTimeForAnswer} setIsBackgroundChange={setIsBackgroundChange} isBackgroundChange={isBackgroundChange}/>
+            <Setings setTimeForAnswer={setTimeForAnswer} setIsBackgroundChange={setIsBackgroundChange} isBackgroundChange={isBackgroundChange} difficulty={difficulty}/>
             <h1 className="title">QUIZ!!!</h1>
-            <Question quiz={quiz} timer={timer} setTimer={setTimer} timeForAnswer={timeForAnswer} />
+            <Question quiz={quiz} timer={timer} setTimer={setTimer} timeForAnswer={timeForAnswer} difficulty={difficulty}
+             />
             {/* <Button   variant="success">Primary</Button>{' '}  */}
         </div>
     );

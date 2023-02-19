@@ -4,7 +4,7 @@ import Answers from "./Answers";
 import Timer from './Timer';
 import './quiz.css';
 
-function Question({ quiz, timeForAnswer, timer, setTimer }) {
+function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
 
     const [score, setScore] = useState(0);
     const [counter, setCounter] = useState({ count: 0, countAll: 0, countView: 1 });
@@ -12,7 +12,12 @@ function Question({ quiz, timeForAnswer, timer, setTimer }) {
     const [color, setColor] = useState({});
     const [buttonDisable, setButtonDisable] = useState(false);
     const [isToGreen, setisToGreen] = useState(false);
-
+    function countForDifficulty(){
+        if(timeForAnswer>9){return difficulty[1]}
+        else if(timeForAnswer<9){return difficulty[0]}
+        else{return  difficulty[2]}
+    }
+   
     const sets = {
         setButtonDisable, setisToGreen,
         setScore, setAccess, setColor
@@ -70,6 +75,7 @@ function Question({ quiz, timeForAnswer, timer, setTimer }) {
                 theNextQes={theNextQes}
                 quiz={quiz} />
             <h2 style={color}>{access}</h2>
+            <h3 > {countForDifficulty()}  רמה </h3>
             <h3 id="score">score: {score}</h3>
         </div>);
 }

@@ -5,14 +5,12 @@ import Question from "./Qestion";
 import setingsImg from "./setingsImg.jpg"
 
 let count = 0;
-function Setings({ setTimeForAnswer ,setIsBackgroundChange,isBackgroundChange}) {
+function Setings({ setTimeForAnswer ,setIsBackgroundChange,isBackgroundChange,difficulty}) {
 
-    const [difficulty, setDifficulty] = useState(["hard", "easy", "medium"]);
+    
     const [isViewSetings, setIsViewSetings] = useState(false);
 
     function changeDifficulty() {
-       
-       
         if (count % difficulty.length == 0) { setTimeForAnswer(6) }
         else if (count % difficulty.length == 1) { setTimeForAnswer(11) }
         else { setTimeForAnswer(9) }
@@ -23,7 +21,7 @@ function Setings({ setTimeForAnswer ,setIsBackgroundChange,isBackgroundChange}) 
    }
 
     return (
-        <div>
+        <div >
             {!isViewSetings && <button style={{ position:"absolute",left:"0px" }}
                 onClick={() => setIsViewSetings(!isViewSetings)}>
                 <img
@@ -31,12 +29,12 @@ function Setings({ setTimeForAnswer ,setIsBackgroundChange,isBackgroundChange}) 
                     style={{ width: "50px", height: "50px" }}>
                 </img>
             </button>}
-            {isViewSetings && <div style={{ width: "150px", height: "150px" ,backgroundColor:"white"}}>
-                <button style={{ position:"absolute",left:"0px" }}
+            {isViewSetings && <div style={{position:"absolute", width: "120px", height: "150px" ,backgroundColor:"white"}}>
+                <button style={{ position:"absolute",left:"0px",top:"0px" }}
                      onClick={ ()=> setIsViewSetings(false)}>
                   x
                 </button>
-                רמה<br></br>
+                שנה רמה<br></br>
                 <button
                     onClick={changeDifficulty}>
                     {difficulty[count % difficulty.length]}
