@@ -74,7 +74,7 @@
  .answerDiv {
      height: 100px;
      width: 250px;
-     font-size: 2em;
+     font-size: 25px;
      background-color: white;
      border-radius: 10px;
      margin-right: 7px;
@@ -83,7 +83,7 @@
  }
 
  /* .answerDiv:hover{
-    font-size: 225%;
+    font-size: 175%;
 } */
 
  #score {

@@ -23,7 +23,6 @@ function Game() {
     async function GetQuiz() {
         const res = await fetch(`http://localhost:8000/${categoryName}`)
         const data = await res.json()
-        // data.sort(()=>Math.random()-0.5)
         setQuiz(data);
     }
 

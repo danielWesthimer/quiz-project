@@ -19,232 +19,343 @@ function sorting(array) {
 }
 
 const data = {
-  animals: [
+  politics: [
     [
       {
         question:
-          "How many soccer animals should each team have on the field at the start of each match",
+          "איך נקראת הגבעה עליה בנויה הכנסת",
         answer: [
           {
             number: 1,
-            body: "9",
+            body: "גבעת הלאום",
           },
           {
             number: 2,
-            body: "10",
+            body: "גבעת רם",
           },
           {
             number: 3,
-            body: "11",
+            body: "גבעת המנורה",
           },
           {
             number: 4,
-            body: "22",
+            body: "גבעת הוורדים",
+          },
+        ],
+        correct: 2,
+      },
+      {
+        question: "מי מהבאים כיהן כיושב-ראש הכנסת",
+        answer: [
+          {
+            number: 1,
+            body: "יצחק רבין",
+          },
+          {
+            number: 2,
+            body: "יצחק נבון",
+          },
+          {
+            number: 3,
+            body: "יצחק בן צבי",
+          },
+          {
+            number: 4,
+            body: "יצחק שמיר",
+          },
+        ],
+        correct: 4,
+      },
+      {
+        question: "באיזו שנה נחנך משכן הכנסת הנוכחי",
+        answer: [
+          {
+            number: 1,
+            body: "1948",
+          },
+          {
+            number: 2,
+            body: "1966",
+          },
+          {
+            number: 3,
+            body: "1949",
+          },
+          {
+            number: 4,
+            body: "1967",
+          },
+        ],
+        correct: 2,
+      },
+      {
+        question: "מי האישה היחידה שכיהנה עד כה כיושבת-ראש הכנסת",
+
+        answer: [
+          {
+            number: 1,
+            body: "גולדה מאיר",
+          },
+          {
+            number: 2,
+            body: "ציפי לבני",
+          },
+          {
+            number: 3,
+            body: "דליה איציק",
+          },
+          {
+            number: 4,
+            body: "לימור לבנת",
           },
         ],
         correct: 3,
       },
       {
-        question: " כשמייקל ג'ורדן שיחק בשיקגו בולס, בכמה אליפויות הוא זכה ",
+        question: "איפה שכנה הכנסת לפני שעברה למשכנה הנוכחי",
         answer: [
           {
             number: 1,
-            body: "9",
+            body: "מוזיאון ארץ ישראל",
           },
           {
             number: 2,
-            body: "6",
+            body: "בית דיזנגוף",
           },
           {
             number: 3,
-            body: "7",
+            body: "בניין הסוכנות היהודית",
           },
           {
             number: 4,
-            body: "15",
-          },
-        ],
-        correct: 2,
-      },
-      {
-        question: "What country won the very first FIFA World Cup in 1930",
-        answer: [
-          {
-            number: 1,
-            body: "England",
-          },
-          {
-            number: 2,
-            body: "Uruguay",
-          },
-          {
-            number: 3,
-            body: "Germany",
-          },
-          {
-            number: 4,
-            body: "Italy",
-          },
-        ],
-        correct: 2,
-      },
-      {
-        question: "Which country has won the World Cup the most times",
-
-        answer: [
-          {
-            number: 1,
-            body: "Argentina",
-          },
-          {
-            number: 2,
-            body: "Italy",
-          },
-          {
-            number: 3,
-            body: "France",
-          },
-          {
-            number: 4,
-            body: "Brazil",
+            body: "בית פרומין",
           },
         ],
         correct: 4,
-      },
-      {
-        question: "איזו נבחרת השתתפה בטורניר גביע העולם הכי הרבה פעמים",
-        answer: [
-          {
-            number: 1,
-            body: "ברזיל",
-          },
-          {
-            number: 2,
-            body: "ארגנטינה",
-          },
-          {
-            number: 3,
-            body: "צרפת",
-          },
-          {
-            number: 4,
-            body: "אנגליה",
-          },
-        ],
-        correct: 1,
       },
     ],
     [
       {
-        question: "איזה שחקן כדורגל זכה הכ הרבה פעמים עם נבחרתו בגביע עולם",
+        question: "הכנסת היא:",
         answer: [
           {
             number: 1,
-            body: "פלה",
+            body: "הרשות המחוקקת",
           },
           {
             number: 2,
-            body: "מרדונה",
+            body: "הרשות המבצעת",
           },
           {
             number: 3,
-            body: "זידאן",
+            body: "הרשות השופטת",
           },
           {
             number: 4,
-            body: "רונאלדו",
+            body: "הרשות החוקרת",
           },
         ],
         correct: 1,
       },
       {
-        question:
-          "Which football player received the Ballon d'Or the most times",
+        question: "איזו מהוועדות הבאות אינה ועדה בכנסת",
         answer: [
           {
             number: 1,
-            body: "Ronaldinio",
+            body: "ועדת החינוך, התרבות והספורט",
           },
           {
             number: 2,
-            body: "Messi",
+            body: "ועדת החוקה, חוק ומשפט",
           },
           {
             number: 3,
-            body: "Benzema",
+            body: "ועדת השוויון, המגדר והגיל השלישי",
           },
           {
             number: 4,
-            body: "Cristiano Ronaldo",
+            body: "ועדת העלייה, הקליטה והתפוצות",
           },
         ],
-        correct: 2,
+        correct: 3,
       },
       {
-        question: "איזה שחקן כדורגל לקח הכי הרבה תארים",
+        question: "מי מזוגות החברי כנסת הבאים אינם אחים",
         answer: [
           {
             number: 1,
-            body: "לאו מסי",
+            body: "אהוד יתום ודני יתום",
           },
           {
             number: 2,
-            body: "דני אלבס",
+            body: "ז'קי לוי ואורלי לוי אבקסיס ",
           },
           {
             number: 3,
-            body: "ווין רוני",
+            body: "דוד לוי ומקסים לוי ",
           },
           {
             number: 4,
-            body: "כרים בנזמה",
-          },
-        ],
-        correct: 2,
-      },
-      {
-        question: "Once in how many years is the Euro tournament held",
-        answer: [
-          {
-            number: 1,
-            body: "2",
-          },
-          {
-            number: 2,
-            body: "6",
-          },
-          {
-            number: 3,
-            body: "3",
-          },
-          {
-            number: 4,
-            body: "4",
+            body: " חיים לנדאו ועוזי לנדאו",
           },
         ],
         correct: 4,
       },
       {
-        question: "Which team has won the Euro the most times",
+        question: "כיצד נקרא הגוף האחראי על אבטחת הכנסת",
         answer: [
           {
             number: 1,
-            body: "Garmany",
+            body: "משטרת הכנסת",
           },
           {
             number: 2,
-            body: "Spain",
+            body: "משמר הכנסת",
           },
           {
             number: 3,
-            body: "England",
+            body: "פלוגות הכנסת",
           },
           {
             number: 4,
-            body: "Answers 1 and 2 are correct",
+            body: "אבטחת הכנסת",
+          },
+        ],
+        correct: 2,
+      },
+      {
+        question: "מה מהמשפטים הבאים נכון",
+        answer: [
+          {
+            number: 1,
+            body: "שר חייב להיות חבר כנסת",
+          },
+          {
+            number: 2,
+            body: "ראש ממשלה חייב להיות חבר כנסת",
+          },
+          {
+            number: 3,
+            body: "יושב-ראש ועדה אינו חייב להיות חבר כנסת",
+          },
+          {
+            number: 4,
+            body: "סגן שר אינו יכול להיות חבר כנסת",
+          },
+        ],
+        correct: 2,
+      },
+    ],
+    [
+      {
+        question: "מה קרה ב-29 באוקטובר 1957",
+        answer: [
+          {
+            number: 1,
+            body: " נחנך משכן הכנסת בירושלים",
+          },
+          {
+            number: 2,
+            body: " נזרק רימון לאולם הכנסת",
+          },
+          {
+            number: 3,
+            body: "נשיא מצרים אנואר סאדאת נאם בכנסת ",
+          },
+          {
+            number: 4,
+            body: "ראש הממשלה דוד בן גוריון הודיע לכנסת על לכידתו של אדולף אייכמן",
+          },
+        ],
+        correct: 2,
+      },
+      {
+        question: "באילו שפות פועל אתר הכנסת",
+        answer: [
+          {
+            number: 1,
+            body: "עברית",
+          },
+          {
+            number: 2,
+            body: "עברית וערבית",
+          },
+          {
+            number: 3,
+            body: "עברית, ערבית ואנגלית",
+          },
+          {
+            number: 4,
+            body: "עברית, ערבית, אנגלית ורוסית",
           },
         ],
         correct: 4,
+      },
+      {
+        question: "איזה תפקיד לא מילא ראובן ריבלין ",
+        answer: [
+          {
+            number: 1,
+            body: "יושב-ראש הכנסת ה-16",
+          },
+          {
+            number: 2,
+            body: "יושב-ראש הכנסת ה-18",
+          },
+          {
+            number: 3,
+            body: "שר התקשורת",
+          },
+          {
+            number: 4,
+            body: "שר המדע",
+          },
+        ],
+        correct: 4,
+      },
+      {
+        question: "איזה תפקיד לא מילא יולי אדלשטיין",
+        answer: [
+          {
+            number: 1,
+            body: "יושב-ראש הכנסת ה-19",
+          },
+          {
+            number: 2,
+            body: "יושב-ראש הכנסת ה-20",
+          },
+          {
+            number: 3,
+            body: " שר הבינוי והשיכון",
+          },
+          {
+            number: 4,
+            body: "שר ההסברה והתפוצות",
+          },
+        ],
+        correct: 3,
+      },
+      {
+        question: "מה לא נכון לגבי שמעון פרס ",
+        answer: [
+          {
+            number: 1,
+            body: "כיהן כשר הביטחון, החוץ והאוצר",
+          },
+          {
+            number: 2,
+            body: "כיהן כראש הממשלה וכנשיא המדינה",
+          },
+          {
+            number: 3,
+            body: "כיהן כיושב-ראש ועדת החוץ והביטחון",
+          },
+          {
+            number: 4,
+            body: "היה חבר הכנסת שכיהן הכי הרבה שנים בכנסת",
+          },
+        ],
+        correct: 3,
       },
     ],
   ],
@@ -595,236 +706,236 @@ const data = {
     [
       {
         question:
-          "How many soccer tec should each team have on the field at the start of each match",
+          "באיזו שנה יצא הדגם הראשון של האייפון",
         answer: [
           {
             number: 1,
-            body: "9",
+            body: "2005",
           },
           {
             number: 2,
-            body: "10",
+            body: "2009",
           },
           {
             number: 3,
-            body: "11",
+            body: "2001",
           },
           {
             number: 4,
-            body: "22",
+            body: "2007",
+          },
+        ],
+        correct: 4,
+      },
+      {
+        question: " באיזו עיירה פיתח אלן טיורינג את המכונה שבאמצעותה פוצחה האניגמה",
+        answer: [
+          {
+            number: 1,
+            body: " בנצ'לי פארק",
+          },
+          {
+            number: 2,
+            body: "אניגמה טאון",
+          },
+          {
+            number: 3,
+            body: "בלצ'לי פארק",
+          },
+          {
+            number: 4,
+            body: "ווסט ברידג'פורד",
           },
         ],
         correct: 3,
       },
       {
-        question: " כשמייקל ג'ורדן שיחק בשיקגו בולס, בכמה אליפויות הוא זכה ",
+        question: " ERP מהם ראשי התיבות ",
         answer: [
           {
             number: 1,
-            body: "9",
+            body: "Enterprise Resource Platform",
           },
           {
             number: 2,
-            body: "6",
+            body: "Enterprise Resource Planning",
           },
           {
             number: 3,
-            body: "7",
+            body: "Enterprise Resource Program",
           },
           {
             number: 4,
-            body: "15",
+            body: "Enterprise Resource Progressive",
           },
         ],
         correct: 2,
       },
       {
-        question: "What country won the very first FIFA World Cup in 1930",
-        answer: [
-          {
-            number: 1,
-            body: "England",
-          },
-          {
-            number: 2,
-            body: "Uruguay",
-          },
-          {
-            number: 3,
-            body: "Germany",
-          },
-          {
-            number: 4,
-            body: "Italy",
-          },
-        ],
-        correct: 2,
-      },
-      {
-        question: "Which country has won the World Cup the most times",
+        question: "מי היה שותפו של סטיב ג'ובס להקמת אפל ומהו כינויו",
 
         answer: [
           {
             number: 1,
-            body: "Argentina",
+            body: "ביל גייטס , בילי דה קיד",
           },
           {
             number: 2,
-            body: "Italy",
+            body: "מארק ג'ובס תאבי האפליקציות",
           },
           {
             number: 3,
-            body: "France",
+            body: "לא היה לו שותף",
           },
           {
             number: 4,
-            body: "Brazil",
+            body: "סטיב ווזניאק , ווז",
           },
         ],
         correct: 4,
       },
       {
-        question: "איזו נבחרת השתתפה בטורניר גביע העולם הכי הרבה פעמים",
+        question: "מה שמה של בכירת ההיי-טק שניסתה להתמודד בבחירות לנשיאות ארצות הברית",
         answer: [
           {
             number: 1,
-            body: "ברזיל",
+            body: " אורסולה ברנס ",
           },
           {
             number: 2,
-            body: "ארגנטינה",
+            body: " קרלי פיורינה",
           },
           {
             number: 3,
-            body: "צרפת",
+            body: " מג וויטמן",
           },
           {
             number: 4,
-            body: "אנגליה",
+            body: " הילרי קלינטון",
           },
         ],
-        correct: 1,
+        correct: 2,
       },
     ],
     [
       {
-        question: "איזה שחקן כדורגל זכה הכ הרבה פעמים עם נבחרתו בגביע עולם",
+        question:"איזה מהשמות הבאים לא מתקשר לאילון מאסק ",
+      
         answer: [
           {
             number: 1,
-            body: "פלה",
+            body: "טסלה",
           },
           {
             number: 2,
-            body: "מרדונה",
+            body: "Space X",
           },
           {
             number: 3,
-            body: "זידאן",
+            body: " Space IL",
           },
           {
             number: 4,
-            body: "רונאלדו",
+            body: "טולסה",
+          },
+        ],
+        correct: 3,
+      },
+      {
+        question: "מיהי האישה הבכירה בפייסבוק",
+        answer: [
+          {
+            number: 1,
+            body: " שריל סנדברג ",
+          },
+          {
+            number: 2,
+            body: " שריל זנדברג",
+          },
+          {
+            number: 3,
+            body: " עדי סופר-תאני",
+          },
+          {
+            number: 4,
+            body: "סוזאן דלמונד ",
           },
         ],
         correct: 1,
       },
       {
-        question:
-          "Which football player received the Ballon d'Or the most times",
+        question: "באיזו שנה הוקם האינטרנט",
         answer: [
           {
             number: 1,
-            body: "Ronaldinio",
+            body: " 1983",
           },
           {
             number: 2,
-            body: "Messi",
+            body: "1978 ",
           },
           {
             number: 3,
-            body: "Benzema",
+            body: "1968 ",
           },
           {
             number: 4,
-            body: "Cristiano Ronaldo",
+            body: "1985 ",
           },
         ],
-        correct: 2,
+        correct: 3,
       },
       {
-        question: "איזה שחקן כדורגל לקח הכי הרבה תארים",
+        question: "איך נקרא הדפדפן הראשון ",
         answer: [
           {
             number: 1,
-            body: "לאו מסי",
+            body: " אקספלורר",
           },
           {
             number: 2,
-            body: "דני אלבס",
+            body: "מוזאיק",
           },
           {
             number: 3,
-            body: "ווין רוני",
+            body: "אינטרווקס",
           },
           {
             number: 4,
-            body: "כרים בנזמה",
-          },
-        ],
-        correct: 2,
-      },
-      {
-        question: "Once in how many years is the Euro tournament held",
-        answer: [
-          {
-            number: 1,
-            body: "2",
-          },
-          {
-            number: 2,
-            body: "6",
-          },
-          {
-            number: 3,
-            body: "3",
-          },
-          {
-            number: 4,
-            body: "4",
+            body: "אף אחת מהתשובות",
           },
         ],
         correct: 4,
       },
       {
-        question: "Which team has won the Euro the most times",
+        question: "איזה שירות מייל נמצא בבעלות מיקרוסופט",
         answer: [
           {
             number: 1,
-            body: "Garmany",
+            body: "Hotmail",
           },
           {
             number: 2,
-            body: "Spain",
+            body: "Bobmail",
           },
           {
             number: 3,
-            body: "England",
+            body: "Xmail",
           },
           {
             number: 4,
-            body: "Answers 1 and 2 are correct",
+            body: "Beemail",
           },
         ],
-        correct: 4,
+        correct: 1,
       },
     ],
   ],
 };
-app.get("/animals", (req, res) => {
+app.get("/politics", (req, res) => {
   const url = req.url;
-  sorting(data.animals);
-  res.send(data.animals);
+  sorting(data.politics);
+  res.send(data.politics);
 });
 app.get("/sport", (req, res) => {
   const url = req.url;
@@ -836,7 +947,7 @@ app.get("/tecnology", (req, res) => {
   sorting(data.tecnology);
   res.send(data.tecnology);
 });
-app.get("/all%20category", (req, res) => {
+app.get("/all%20categories", (req, res) => {
   const url = req.url;
   sorting(data.tecnology);
 

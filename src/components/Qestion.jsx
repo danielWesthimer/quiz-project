@@ -1,8 +1,11 @@
 import React from "react";
 import { useState, useEffect } from 'react';
+import { useNavigate  } from "react-router-dom";
 import Answers from "./Answers";
 import Timer from './Timer';
 import './quiz.css';
+
+
 
 function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
 
@@ -12,6 +15,8 @@ function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
     const [color, setColor] = useState({});
     const [buttonDisable, setButtonDisable] = useState(false);
     const [isToGreen, setisToGreen] = useState(false);
+    const navigate =useNavigate ();
+
     function countForDifficulty(){
         if(timeForAnswer>9){return difficulty[1]}
         else if(timeForAnswer<9){return difficulty[0]}
@@ -35,13 +40,14 @@ function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
         if (countAll == quiz.length - 1) {
             setAccess("the quiz finished")
             setButtonDisable(true)
+            navigate("/");
             return;
         }
         setCounter({ ...counter, count: 0, countAll: countAll + 1, countView: countView + 1 });
         setAccess("");
     }
+
     function theNextQes(interval) {
-        
         setButtonDisable(false)
         setisToGreen(false)
         if (count == quiz[countAll].length - 1) {

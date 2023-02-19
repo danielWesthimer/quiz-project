@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import sportImg from "./sport.jpg"
+import sportImg from "./images/sport.jpg"
+import politicsImg from "./images/politicsImg.jpg"
+import tecImg from "./images/tecImg.jpg"
 
 function Categories() {
 
     const category = [
-        { name: "animals", image: sportImg },
+        { name: "politics", image: politicsImg },
         { name: "sport", image: sportImg },
-        { name: "tecnology", image: sportImg },
-        { name: "all category", image: sportImg }
+        { name: "tecnology", image: tecImg },
+        { name: "all categories", image: sportImg }
     ];
     return (
         <div className="bodyCat">
@@ -17,15 +19,17 @@ function Categories() {
             <h1>Categories</h1>
             {category.map(
                 (category, idx) =>
-                    <Link
-                        id="link"
-                        to={`/game/${category.name}`}>
-                        <img
-                            src={category.image} alt={category.name}
-                            style={{width:"250px",height:"150px"}}>
-                        </img>
-                        {/* {category.name} */}
-                    </Link>)}
+                    <div style={{display:"inline-block" ,marginLeft:"20px"}}>
+                        <Link 
+                            id="link"
+                            to={`/game/${category.name}`}>
+                            <img 
+                                src={category.image} alt={category.name}
+                                style={{ width: "250px", height: "150px",display:"inline-block" ,borderRadius:"25px"}}>
+                            </img>
+                        </Link>
+                          <p>{category.name} </p>
+                    </div>)}
         </div>
     );
 }
