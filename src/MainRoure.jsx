@@ -11,6 +11,8 @@ import Categories from './components/Categories';
 
 
 function MainRoure() {
+    // const [score, setScore] = useState(0);
+
     return (
         <BrowserRouter>
             <Routes>

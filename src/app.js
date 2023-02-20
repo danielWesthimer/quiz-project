@@ -819,8 +819,8 @@ const data = {
     ],
     [
       {
-        question:"איזה מהשמות הבאים לא מתקשר לאילון מאסק ",
-      
+        question: "איזה מהשמות הבאים לא מתקשר לאילון מאסק ",
+
         answer: [
           {
             number: 1,
@@ -932,25 +932,19 @@ const data = {
     ],
   ],
 };
-app.get("/politics", (req, res) => {
-  const url = req.url;
-  sorting(data.politics);
-  res.send(data.politics);
-});
-app.get("/sport", (req, res) => {
-  const url = req.url;
-  sorting(data.sport);
-  res.send(data.sport);
-});
-app.get("/tecnology", (req, res) => {
-  const url = req.url;
-  sorting(data.tecnology);
-  res.send(data.tecnology);
-});
-app.get("/all%20categories", (req, res) => {
-  const url = req.url;
-  sorting(data.tecnology);
 
-  res.send(data.tecnology);
+app.get("/all%20categories", (req, res) => {
+  const allCategoryArr = [];
+  Object.values(data).forEach(val => allCategoryArr.push(val[Math.floor(Math.random() * val.length)]))
+  sorting(allCategoryArr);
+  res.send(allCategoryArr);
 });
+
+app.get("/:catrgoryId", (req, res) => {
+  const { catrgoryId } = req.params;
+  console.log(catrgoryId);
+  sorting(data[catrgoryId]);
+  res.send(data[catrgoryId]);
+});
+
 app.listen(8000, () => console.log("listning to port 8000...."));

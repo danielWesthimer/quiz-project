@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import sportImg from "./images/sport.jpg"
 import politicsImg from "./images/politicsImg.jpg"
 import tecImg from "./images/tecImg.jpg"
+import all from "./images/all.jpg"
 
 function Categories() {
 
@@ -10,7 +11,7 @@ function Categories() {
         { name: "politics", image: politicsImg },
         { name: "sport", image: sportImg },
         { name: "tecnology", image: tecImg },
-        { name: "all categories", image: sportImg }
+        { name: "all categories", image: all }
     ];
     return (
         <div className="bodyCat">
@@ -25,7 +26,7 @@ function Categories() {
                             to={`/game/${category.name}`}>
                             <img 
                                 src={category.image} alt={category.name}
-                                style={{ width: "250px", height: "150px",display:"inline-block" ,borderRadius:"25px"}}>
+                                style={{ width: "300px", height: "200px",display:"inline-block" ,borderRadius:"30px"}}>
                             </img>
                         </Link>
                           <p>{category.name} </p>

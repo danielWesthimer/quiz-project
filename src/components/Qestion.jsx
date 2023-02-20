@@ -6,7 +6,6 @@ import Timer from './Timer';
 import './quiz.css';
 
 
-
 function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
 
     const [score, setScore] = useState(0);
@@ -57,7 +56,7 @@ function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
             setTimeout(() => {
                 theNextSeries()
                 
-                setTimer(timeForAnswer)
+                 setTimer(timeForAnswer)
             }, 1000);
             return;
         }
