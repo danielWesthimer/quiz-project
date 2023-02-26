@@ -5,6 +5,17 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
+// var admin = require("firebase-admin");
+
+// var serviceAccount = require("path/to/serviceAccountKey.json");
+
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount)
+// });
+
+
+
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
@@ -942,7 +953,6 @@ app.get("/all%20categories", (req, res) => {
 
 app.get("/:catrgoryId", (req, res) => {
   const { catrgoryId } = req.params;
-  console.log(catrgoryId);
   sorting(data[catrgoryId]);
   res.send(data[catrgoryId]);
 });

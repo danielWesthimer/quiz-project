@@ -1,7 +1,11 @@
 import React from "react";
 import { useState, useEffect } from 'react';
+import voiceFotTimer from "./images/button-33a.mp3";
 
-function Timer({ setTimer, theNextQes, buttonDisable, timer }) {
+function Timer({ setTimer, theNextQes, buttonDisable, timer,playAudio }) {
+
+    const [soundForTimer]=useState(new Audio(voiceFotTimer))
+
     let interval;
     useEffect(
         () => {
@@ -19,9 +23,11 @@ function Timer({ setTimer, theNextQes, buttonDisable, timer }) {
             () => {
                 if (timer == 0) {
                     theNextQes()
+                    playAudio(soundForTimer)
                 }
                 else {
                     setTimer(timer - 1)
+                    playAudio(soundForTimer)
                 }
             }
             , 1000);

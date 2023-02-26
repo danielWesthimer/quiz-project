@@ -19,7 +19,7 @@ function Categories() {
 
             <h1>Categories</h1>
             {category.map(
-                (category, idx) =>
+                (category)=>
                     <div style={{display:"inline-block" ,marginLeft:"20px"}}>
                         <Link 
                             id="link"

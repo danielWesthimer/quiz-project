@@ -5,8 +5,8 @@ import Question from "./Qestion";
 import Button from "react-bootstrap/esm/Button";
 import Setings from "./Setings";
 
-function Game() {
 
+function Game() {
 
     const { categoryName } = useParams();
     const [quiz, setQuiz] = useState();
@@ -15,6 +15,7 @@ function Game() {
     const [background, setBackground] = useState(["background0", "background1", "background2", "background3"]);
     const [isBackgroundChange, setIsBackgroundChange] = useState(true);
     const [difficulty, setDifficulty] = useState(["hard", "easy", "medium"]);
+    
 
     useEffect(
         () => { GetQuiz() }
@@ -26,13 +27,22 @@ function Game() {
         setQuiz(data);
     }
 
+
     return (
         <div id="bodyGame"
-            className={isBackgroundChange?background[timer % background.length]:background[2]}>
-            <Setings setTimeForAnswer={setTimeForAnswer} setIsBackgroundChange={setIsBackgroundChange} isBackgroundChange={isBackgroundChange} difficulty={difficulty}/>
+            className={isBackgroundChange ? background[timer % background.length] : background[2]}>
+            <Setings setTimeForAnswer={setTimeForAnswer}
+                     setIsBackgroundChange={setIsBackgroundChange}
+                     isBackgroundChange={isBackgroundChange}
+                     difficulty={difficulty} />
             <h1 className="title">QUIZ!!!</h1>
-            <Question quiz={quiz} timer={timer} setTimer={setTimer} timeForAnswer={timeForAnswer} difficulty={difficulty}
-             />
+            <Question quiz={quiz} 
+                     timer={timer} 
+                     setTimer={setTimer} 
+                     timeForAnswer={timeForAnswer} 
+                     difficulty={difficulty}
+            />
+           
             {/* <Button   variant="success">Primary</Button>{' '}  */}
         </div>
     );

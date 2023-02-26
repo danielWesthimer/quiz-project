@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { useNavigate  } from "react-router-dom";
 import Answers from "./Answers";
 import Timer from './Timer';
+
+                  
 import './quiz.css';
 
 
@@ -14,6 +16,8 @@ function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
     const [color, setColor] = useState({});
     const [buttonDisable, setButtonDisable] = useState(false);
     const [isToGreen, setisToGreen] = useState(false);
+    // const [isSound, setIsSound] = useState(true);
+   
     const navigate =useNavigate ();
 
     function countForDifficulty(){
@@ -32,6 +36,10 @@ function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
     };
     let { count, countAll, countView } = counter;
 
+    function playAudio(audio){
+        console.log("sound");
+        audio.play()
+    }
 
     function theNextSeries() {
         setButtonDisable(false)
@@ -55,7 +63,7 @@ function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
             clearInterval(interval)
             setTimeout(() => {
                 theNextSeries()
-                
+               
                  setTimer(timeForAnswer)
             }, 1000);
             return;
@@ -66,10 +74,13 @@ function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
     }
     return (
         <div>
-            <Timer buttonDisable={buttonDisable}
+            <Timer 
+                buttonDisable={buttonDisable}
                 theNextQes={theNextQes}
                 timer={timer}
-                setTimer={setTimer} />
+                setTimer={setTimer}
+                playAudio={playAudio}
+                 />
     {quiz &&<h4>{countView}/{quiz.length * quiz[0].length}</h4>}
             <h2>Level: {countAll + 1}</h2>
             <h2 >Question:{count + 1}</h2>
@@ -78,7 +89,8 @@ function Question({ quiz, timeForAnswer, timer, setTimer,difficulty }) {
                 stateVaribals={stateVaribals}
                 sets={sets}
                 theNextQes={theNextQes}
-                quiz={quiz} />
+                quiz={quiz}
+                playAudio={playAudio} />
             <h2 style={color}>{access}</h2>
             <h3 > {countForDifficulty()}  רמה </h3>
             <h3 id="score">score: {score}</h3>
